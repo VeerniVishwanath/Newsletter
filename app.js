@@ -23,7 +23,7 @@ app.post("/", (req, res) => {
 
   const run = async () => {
     try {
-      const response = await client.lists.batchListMembers("qc4872b8f39", {
+      const response = await client.lists.batchListMembers("c4872b8f39", {
         members: [
           {
             email_address: email,
@@ -49,4 +49,3 @@ app.post("/", (req, res) => {
 app.listen(process.env.PORT || 3000, () => {
   console.log("Server is running at port 3000");
 });
-    
