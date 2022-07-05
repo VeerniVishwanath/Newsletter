@@ -3,6 +3,8 @@ const app = express();
 
 const client = require("@mailchimp/mailchimp_marketing");
 
+app.set("view engine", "ejs");
+
 app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static("public"));
@@ -39,7 +41,7 @@ app.post("/", (req, res) => {
     } catch (error) {
       var errorCode = error.response.body.status;
       var errorDetail = error.response.body.detail;
-      res.sendFile(__dirname + "/failure.html");
+      res.render("failure", { errorCode: errorCode, errorDetail: errorDetail });
     }
   };
 
