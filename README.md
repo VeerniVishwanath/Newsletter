@@ -1,7 +1,7 @@
 # Newsletter Sign-Up
 
 This my Newsletter Sign-up page made using nodejs, expressjs And is deployed on heroku -
-[Heroku](https://rugged-north-cascades-06350.herokuapp.com/).
+[Heroku](https://news-letter-06350.herokuapp.com/).
 
 ## Available Scripts
 
