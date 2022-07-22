@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const app = express();
 
@@ -19,13 +20,13 @@ app.post("/", (req, res) => {
   const lname = req.body.Lname;
 
   client.setConfig({
-    apiKey: "a970fa217d44725a4bac718e920e4d49",
+    apiKey: process.env.API_KEY,
     server: "us11",
   });
 
   const run = async () => {
     try {
-      const response = await client.lists.batchListMembers("c4872b8f39", {
+      const response = await client.lists.batchListMembers(process.env.AUDIENCE_ID , {
         members: [
           {
             email_address: email,
